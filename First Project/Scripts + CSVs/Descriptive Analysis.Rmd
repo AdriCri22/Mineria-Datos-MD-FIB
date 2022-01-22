@@ -1,0 +1,216 @@
+
+## Get the Path and select the csv file that will be analysed
+
+```{r}
+setwd("G:/Mi unidad/MD/Project 1/Scripts + CSVs")
+dd <- read.csv("2 - Knn.csv", sep=";");
+```
+
+## Set a color palette for the plots
+
+```{r}
+colors = c("#EF5350", "#EC407A", "#AB47BC", "#5C6BC0", "#42A5F5", "#26C6DA", "#26A69A", "#66BB6A", "#D4E157", "#FFEE58", "#FFA726", "#FF7043", "#8D6E63")
+```
+
+## Univariate description of age variable
+
+```{r}
+# Age
+var <- dd$age
+
+cat("Minimum value: ", min(var), "\n")      # Get minimum value
+cat("Maximum value: ", max(var), "\n")      # Get maximum value
+cat("Mean: ", mean(var), "\n")              # Get mean
+cat("Median: ", median(var), "\n")          # Get median
+cat("Variance: ", var(var), "\n")           # Get variance
+cat("Standard deviation: ", sd(var), "\n")  # Get standard deviation
+
+# Get histogram 
+hist(var, xlab = "Age", main = "Histogram of age")
+
+# Get a plot to see if follow a normal distribution
+qqnorm(var); qqline(var, col = "red")
+
+```
+
+## Univariate description of job variable
+
+```{r}
+# Job
+var <- dd$job
+barplot(sort(table(var), decreasing = T), col = colors[1]);
+pie(table(var), col = colors)
+```
+
+## Univariate description of Marital variable
+
+```{r}
+# Marital
+var <- dd$marital
+barplot(sort(table(var), decreasing = T), col = colors[2]);
+pie(table(var), col = colors)
+```
+
+## Univariate description of education variable
+
+```{r}
+# Education
+var <- dd$education
+barplot(sort(table(var), decreasing = T), col = colors[3]);
+pie(table(var), col = colors)
+```
+
+## Univariate description of default variable
+
+```{r}
+# Default
+var <- dd$default
+barplot(sort(table(var), decreasing = T), col = colors[4]);
+pie(table(var), col = colors)
+```
+
+## Univariate description of balance variable
+
+```{r}
+var <- dd$balance
+
+cat("Minimum value: ", min(var), "\n")      # Get minimum value
+cat("Maximum value: ", max(var), "\n")      # Get maximum value
+cat("Mean: ", mean(var), "\n")              # Get mean
+cat("Median: ", median(var), "\n")          # Get median
+cat("Variance: ", var(var), "\n")           # Get variance
+cat("Standard deviation: ", sd(var), "\n")  # Get standard deviation
+
+# Get histogram 
+hist(var, xlab = "Age", main = "Histogram of age")
+
+# Get a plot to see if follow a normal distribution
+qqnorm(var); qqline(var, col = "red")
+```
+
+
+## Univariate description of housing variable
+
+```{r}
+var <- dd$housing
+barplot(sort(table(var), decreasing = T), col = colors[5]);
+pie(table(var), col = colors)
+```
+
+## Univariate description of loan variable
+
+```{r}
+var <- dd$loan
+barplot(sort(table(var), decreasing = T), col = colors[6]);
+pie(table(var), col = colors)
+```
+
+## Univariate description of day variable
+
+```{r}
+
+```
+
+## Univariate description of month variable
+
+```{r}
+
+```
+
+## Univariate description of duration variable
+
+```{r}
+var <- dd$duration
+
+cat("Minimum value: ", min(var), "\n")      # Get minimum value
+cat("Maximum value: ", max(var), "\n")      # Get maximum value
+cat("Mean: ", mean(var), "\n")              # Get mean
+cat("Median: ", median(var), "\n")          # Get median
+cat("Variance: ", var(var), "\n")           # Get variance
+cat("Standard deviation: ", sd(var), "\n")  # Get standard deviation
+
+# Get histogram 
+hist(var, xlab = "Age", main = "Histogram of age")
+
+# Get a plot to see if follow a normal distribution
+qqnorm(var); qqline(var, col = "red")
+```
+
+## Univariate description of campaign variable
+
+```{r}
+var <- dd$campaign
+
+cat("Minimum value: ", min(var), "\n")      # Get minimum value
+cat("Maximum value: ", max(var), "\n")      # Get maximum value
+cat("Mean: ", mean(var), "\n")              # Get mean
+cat("Median: ", median(var), "\n")          # Get median
+cat("Variance: ", var(var), "\n")           # Get variance
+cat("Standard deviation: ", sd(var), "\n")  # Get standard deviation
+
+# Get histogram 
+hist(var, xlab = "Age", main = "Histogram of age")
+
+# Get a plot to see if follow a normal distribution
+qqnorm(var); qqline(var, col = "red")
+```
+
+## Univariate description of pdays variable
+
+```{r}
+var <- dd$pdays
+
+cat("Minimum value: ", min(var), "\n")      # Get minimum value
+cat("Maximum value: ", max(var), "\n")      # Get maximum value
+cat("Mean: ", mean(var), "\n")              # Get mean
+cat("Median: ", median(var), "\n")          # Get median
+cat("Variance: ", var(var), "\n")           # Get variance
+cat("Standard deviation: ", sd(var), "\n")  # Get standard deviation
+
+# Get histogram 
+hist(var, xlab = "Age", main = "Histogram of age")
+
+# Get a plot to see if follow a normal distribution
+qqnorm(var); qqline(var, col = "red")
+```
+
+## Univariate description of previous variable
+
+```{r}
+var <- dd$previous
+
+cat("Minimum value: ", min(var), "\n")      # Get minimum value
+cat("Maximum value: ", max(var), "\n")      # Get maximum value
+cat("Mean: ", mean(var), "\n")              # Get mean
+cat("Median: ", median(var), "\n")          # Get median
+cat("Variance: ", var(var), "\n")           # Get variance
+cat("Standard deviation: ", sd(var), "\n")  # Get standard deviation
+
+# Get histogram 
+hist(var, xlab = "Age", main = "Histogram of age")
+
+# Get a plot to see if follow a normal distribution
+qqnorm(var); qqline(var, col = "red")
+```
+
+## Univariate description of potcome variable
+
+```{r}
+var <- dd$poutcome
+barplot(sort(table(var), decreasing = T), col = colors[7]);
+pie(table(var), col = colors)
+```
+
+## Univariate description of y variable
+
+```{r}
+var <- dd$y
+barplot(sort(table(var), decreasing = T), col = colors[1]);
+pie(table(var), col = colors)
+```
+
+
+```{r}
+summary(dd)
+```
+
